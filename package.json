@@ -1,0 +1,47 @@
+{
+  "name": "@nightlycommit/d-n",
+  "version": "1.0.0",
+  "description": "n-sided dice, the functional way",
+  "keywords": [
+    "dice",
+    "roll",
+    "n-sided",
+    "functional"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "precover": "rimraf coverage .nyc_output",
+    "prebuild": "npm run clean",
+    "prepack": "npm run clean && npm run build",
+    "postpack": "npm run clean",
+    "build": "tsc --project . --outDir dist --declaration true",
+    "build:doc": "typedoc src --out docs --name d-n --excludePrivate",
+    "test": "ts-node node_modules/tape/bin/tape 'test/**/index.ts' | tap-spec",
+    "cover": "rimraf .nyc_output coverage && nyc npm t",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NightlyCommit/d-n.git"
+  },
+  "author": "Eric MORAND",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/NightlyCommit/d-n/issues"
+  },
+  "homepage": "https://github.com/NightlyCommit/d-n#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.12",
+    "@types/sinon": "^9.0.9",
+    "@types/tape": "^4.13.0",
+    "coveralls": "^3.1.0",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.2",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.0.1",
+    "ts-node": "^9.1.1",
+    "typedoc": "^0.20.0-beta.27",
+    "typescript": "^4.1.2"
+  }
+}
