@@ -35,7 +35,7 @@ Read the [documentation](https://nightlycommit.github.io/d-n) for more informati
 
 Apache-2.0 © [Eric MORAND]()
 
-[npm-image]: https://badge.fury.io/js/@nightlycommit/d-n.svg
+[npm-image]: https://badge.fury.io/js/%40nightlycommit%2Fd-n.svg
 [npm-url]: https://npmjs.org/package/@nightlycommit/d-n
 [travis-image]: https://travis-ci.com/NightlyCommit/d-n.svg?branch=master
 [travis-url]: https://travis-ci.com/NightlyCommit/d-n
